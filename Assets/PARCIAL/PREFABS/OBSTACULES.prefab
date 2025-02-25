@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 52204172818308372}
   - component: {fileID: 3905284483447052376}
   - component: {fileID: 2701571305959577868}
+  - component: {fileID: -1969602324603026214}
   m_Layer: 0
   m_Name: OBSTACULES
   m_TagString: Untagged
@@ -144,5 +145,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1aae2658646f224c87c2495206410bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-1969602324603026214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8253551540594097254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d2e807b08fdfc44912764b835291ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

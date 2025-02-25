@@ -17,6 +17,7 @@ public class PLAYERMOV : MonoBehaviour
     {
         originalHeadPosition = head.localPosition; // Se guarda la posicion original de la cabeza
         rb = GetComponent<Rigidbody>(); // Obtener referencia al Rigidbody
+        rb.useGravity = true; // Asegúrate de que la gravedad esté habilitada
     }
 
     private void Update()
@@ -46,7 +47,7 @@ public class PLAYERMOV : MonoBehaviour
 
     void Crouch()
     {
-        if (Input.GetKey(KeyCode.Mouse0) && !hasJumped) // Si se presiona el botón del ratón y no ha saltado
+        if (Input.GetKey(KeyCode.LeftControl) && !hasJumped) // Si se presiona el botón del ratón y no ha saltado
         {
             head.localPosition = new Vector3(head.localPosition.x, originalHeadPosition.y - crounch, head.localPosition.z); // Se agacha
             Debug.Log("Crouch");
