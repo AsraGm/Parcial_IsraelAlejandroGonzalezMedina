@@ -1,0 +1,2 @@
+A diferencia de el video, el fondo debe de poder 
+moverse y no estar estatico.

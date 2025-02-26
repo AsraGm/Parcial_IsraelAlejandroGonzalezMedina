@@ -8,6 +8,8 @@ public class PLAYERMOV : MonoBehaviour
     [SerializeField] private float crounch = 0.008f; // Variable para saber cuanto se agacha
     [SerializeField] private LayerMask layerGround; // Variable para saber que es suelo
     [SerializeField] private Transform head; // Variable para saber la cabeza del jugador
+    [SerializeField] private float maxVerticalSpeed = -20f; // Velocidad máxima descendente
+    [SerializeField] private float maxUpwardSpeed = 15f; // Velocidad máxima ascendente
 
     private Vector3 originalHeadPosition; // Variable para saber la posicion original de la cabeza
     private bool hasJumped = false; // Variable para saber si ya ha saltado y evitar doble salto
@@ -25,6 +27,7 @@ public class PLAYERMOV : MonoBehaviour
         Jump();
         Crouch();
         UpdateHeadPosition();
+        LimitVerticalSpeed();
     }
 
     void Jump()
@@ -75,6 +78,20 @@ public class PLAYERMOV : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    void LimitVerticalSpeed()
+    {
+        // Limitar velocidad descendente
+        if (rb.velocity.y < maxVerticalSpeed)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, maxVerticalSpeed, rb.velocity.z);
+        }
+        // Limitar velocidad ascendente
+        else if (rb.velocity.y > maxUpwardSpeed)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, maxUpwardSpeed, rb.velocity.z);
+        }
     }
 
     private void OnDrawGizmos()
