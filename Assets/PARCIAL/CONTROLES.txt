@@ -1,0 +1,2 @@
+BARRA ESPACIADORA == "Salto"
+CTRL (izquierdo) == "Agacharse"

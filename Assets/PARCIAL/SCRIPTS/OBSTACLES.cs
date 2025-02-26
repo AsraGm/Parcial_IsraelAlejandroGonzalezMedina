@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OBSTACLES : MonoBehaviour
+public class Obstacles : MonoBehaviour
 {
     [SerializeField] private GameObject prefabObstacles; // Variable para guardar los obstaculos
     [SerializeField] private float speed = 5f; // Variable para saber la velocidad de los obstaculos

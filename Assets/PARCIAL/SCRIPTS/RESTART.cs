@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RESTART : MonoBehaviour
+public class Restart : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {

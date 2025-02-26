@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PLAYERMOV : MonoBehaviour
+public class Playermov : MonoBehaviour
 {
     [SerializeField] private float jumpForce = 10f; // Variable para saber la fuerza del salto
     [SerializeField] private float crounch = 0.008f; // Variable para saber cuanto se agacha
